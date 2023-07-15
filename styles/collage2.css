@@ -1,0 +1,41 @@
+/* *{
+    margin: 1px;
+    padding: 0;
+} */
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.row{
+    height: 400px;
+    display: flex;
+    /* border: 2px solid red; */
+    gap: 5px;
+    margin-bottom: 5px;
+}
+.vertical-collage img{
+    height: calc(( 100% - 4px )/2);
+}
+.row > div{
+    flex: 1;
+}
+.square-collage{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5px;
+}
+@media screen and (max-width: 576px) {
+    .row{
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 5px;
+        gap: 0px;
+        /* border: 2px solid red; */
+    }
+    .square-collage{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 5px;
+    }
+}
